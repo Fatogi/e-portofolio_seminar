@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Digital LK 2: Refleksi Pengalaman Belajar Mata Kuliah - Sabda Patogi Aditya, S.Kom.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="theme-light">
+  <!-- Top Progress Bar -->
+  <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+
+  <!-- Announcement / LMS Topbar -->
+  <header class="lms-top-bar">
+    <div class="container lms-top-content">
+      <div class="top-badge-group">
+        <span class="pulse-indicator"></span>
+        <span class="lms-tag">LMS PPG Calon Guru</span>
+        <span class="lms-separator">•</span>
+        <span class="lms-desc">Tugas Lembar Kerja 2 (LK 2) — Portofolio Digital Refleksi Semester 1</span>
+      </div>
+      <div class="top-actions">
+        <button id="btnCopyLmsLink" class="btn btn-sm btn-ghost" title="Salin Tautan Portofolio untuk diunggah ke LMS">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+          <span>Salin Tautan LMS</span>
+        </button>
+        <button id="btnPrintLk2" class="btn btn-sm btn-primary-light"
+          title="Cetak atau Simpan PDF Resmi Lembar Kerja 2">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span>Cetak Dokumen LK 2</span>
+        </button>
+        <button id="themeToggle" class="btn btn-icon btn-ghost" aria-label="Ganti Tema">
+          <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Navigation Header -->
+  <nav class="main-navbar" id="mainNavbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" title="Portofolio Digital LK 2 PPG">
+        <div class="logo-icon">
+          <span>LK2</span>
+        </div>
+        <div class="brand-text">
+          <div class="brand-title-wrap">
+            <span class="brand-title">PORTOFOLIO DIGITAL LK 2</span>
+            <span class="brand-badge">PPG</span>
+          </div>
+          <span class="brand-subtitle">Sabda Patogi Aditya, S.Kom. • Informatika &amp; DKV</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Fluid Pill Bar) -->
+      <div class="nav-links" id="desktopNavLinks">
+        <a href="#identitas" class="nav-item">Identitas</a>
+        <a href="#pertemuan" class="nav-item">6 Pertemuan</a>
+        <a href="#refleksi4c" class="nav-item">Refleksi 4C</a>
+        <a href="#artefak" class="nav-item">Analisis Artefak</a>
+        <a href="#praktik" class="nav-item">Kaitan Praktis</a>
+        <a href="#tindaklanjut" class="nav-item">Tindak Lanjut</a>
+      </div>
+
+      <!-- Nav Actions (Switcher & Hamburger) -->
+      <div class="nav-actions">
+        <div class="view-switch-wrapper">
+          <button id="viewSwitchBtn" class="view-toggle-btn" data-mode="interactive"
+            title="Beralih Mode Tampilan Portofolio">
+            <span class="view-opt opt-interactive active">
+              <svg class="view-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>Web Interaktif</span>
+            </span>
+            <span class="view-opt opt-formal">
+              <svg class="view-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+              </svg>
+              <span>Format Resmi</span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Hamburger Toggle Button (Mobile/Tablet) -->
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Menu Navigasi Portofolio" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile & Tablet Slide-in Drawer -->
+  <aside id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="drawer-user-info">
+        <div class="drawer-avatar">SP</div>
+        <div class="drawer-user-text">
+          <div class="drawer-name">Sabda Patogi Aditya, S.Kom.</div>
+          <div class="drawer-role">PPG Calon Guru • Kejuruan DKV</div>
+        </div>
+      </div>
+      <button id="closeDrawerBtn" class="drawer-close-btn" aria-label="Tutup Menu">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-body">
+      <div class="drawer-section-label">Navigasi Halaman</div>
+      <nav class="drawer-nav">
+        <a href="#identitas" class="drawer-nav-item">
+          <span class="drawer-nav-icon">👤</span>
+          <span class="drawer-nav-text">Identitas Calon Guru</span>
+        </a>
+        <a href="#pertemuan" class="drawer-nav-item">
+          <span class="drawer-nav-icon">📚</span>
+          <span class="drawer-nav-text">Review 6 Pertemuan Semester 1</span>
+        </a>
+        <a href="#refleksi4c" class="drawer-nav-item">
+          <span class="drawer-nav-icon">💡</span>
+          <span class="drawer-nav-text">Refleksi Model 4C (Topik 4 DUP)</span>
+        </a>
+        <a href="#artefak" class="drawer-nav-item">
+          <span class="drawer-nav-icon">📁</span>
+          <span class="drawer-nav-text">Analisis 6 Artefak Otentik</span>
+        </a>
+        <a href="#praktik" class="drawer-nav-item">
+          <span class="drawer-nav-icon">🛠️</span>
+          <span class="drawer-nav-text">Kaitan Praktis (Informatika X DKV)</span>
+        </a>
+        <a href="#tindaklanjut" class="drawer-nav-item">
+          <span class="drawer-nav-icon">🚀</span>
+          <span class="drawer-nav-text">Rencana Tindak Lanjut (RTL)</span>
+        </a>
+      </nav>
+
+      <div class="drawer-section-label mt-4">Pilihan Mode Tampilan</div>
+      <div class="drawer-view-switch">
+        <button id="drawerToggleModeBtn" class="btn btn-secondary w-full">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+          </svg>
+          <span id="drawerToggleText">Buka Format Resmi LK 2</span>
+        </button>
+      </div>
+
+      <div class="drawer-section-label mt-4">Aksi Cepat LMS &amp; Cetak</div>
+      <div class="drawer-quick-actions">
+        <button id="drawerCopyLmsBtn" class="btn btn-ghost w-full">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+          <span>Salin Tautan LMS</span>
+        </button>
+        <button id="drawerPrintBtn" class="btn btn-primary-light w-full">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span>Cetak Dokumen LK 2</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+  <div id="drawerOverlay" class="drawer-overlay" aria-hidden="true"></div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-meta-badge">
+          <span class="badge-dot"></span>
+          <span>Lembar Kerja 2 (LK 2) Seminar PPG</span>
+        </div>
+        <h1 class="hero-title">
+          Refleksi Pengalaman Belajar Setiap Mata Kuliah
+        </h1>
+        <p class="hero-lead">
+          Dokumentasi reflektif terstruktur atas 6 pertemuan pembelajaran di Semester 1 dengan integrasi model refleksi
+          <strong>4C (Connection, Challenge, Concept, Change)</strong>, pembuktian berbasis <strong>6 Artefak
+            Pembelajaran Otentik</strong>, serta perancangan <strong>Desain Universal untuk Pembelajaran
+            (DUP/UDL)</strong> dalam pembelajaran mendalam di SMK.
+        </p>
+
+        <!-- Quick Stats / Badges -->
+        <div class="hero-stats-row">
+          <div class="stat-card">
+            <span class="stat-number">6</span>
+            <span class="stat-label">Pertemuan Terrefleksi</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">4C</span>
+            <span class="stat-label">Model Refleksi Holistik</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">6</span>
+            <span class="stat-label">Bukti Artefak Digital</span>
+          </div>
+          <div class="stat-card accent">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Kesiapan Guru Vokasi</span>
+          </div>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="#refleksi4c" class="btn btn-primary">
+            <span>Pelajari Refleksi 4C</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+          <a href="#artefak" class="btn btn-secondary">
+            <span>Telusuri 6 Artefak</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Student Profile Card -->
+      <div class="hero-card-col">
+        <div class="profile-card glass-panel">
+          <div class="profile-header-banner"></div>
+          <div class="profile-avatar-wrap">
+            <div class="avatar-circle">
+              <span class="avatar-initials">SP</span>
+            </div>
+            <div class="verified-pill">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+              </svg>
+              <span>Calon Guru Profesional</span>
+            </div>
+          </div>
+
+          <div class="profile-details">
+            <h3 class="profile-name">Sabda Patogi Aditya, S.Kom.</h3>
+            <p class="profile-role">Mahasiswa PPG Calon Guru Bidang Informatika &amp; DKV</p>
+
+            <div class="profile-meta-list">
+              <div class="profile-meta-item">
+                <span class="meta-label">Mata Kuliah</span>
+                <span class="meta-val">Pembelajaran Mendalam &amp; Asesmen (PMA) / Seminar PPG</span>
+              </div>
+              <div class="profile-meta-item">
+                <span class="meta-label">Semester / Tahun</span>
+                <span class="meta-val">Semester 1 (Satu) — Gelombang 1</span>
+              </div>
+              <div class="profile-meta-item">
+                <span class="meta-label">Fase / Sasaran</span>
+                <span class="meta-val">Fase E (Kelas X SMK Desain Komunikasi Visual)</span>
+              </div>
+              <div class="profile-meta-item">
+                <span class="meta-label">Fokus Bahasan</span>
+                <span class="meta-val">Topik 4: DUP &amp; Asesmen Autentik Vokasi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: IDENTITAS & REVIEW 6 PERTEMUAN -->
+  <section id="identitas" class="section bg-subtle">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">LEMBAR KERJA 2 (LK 2)</span>
+        <h2 class="section-title">Review Perjalanan Belajar Semester 1</h2>
+        <p class="section-subtitle">
+          Tinjauan retrospektif atas 6 pertemuan/topik perkuliahan Semester 1 yang telah membentuk kerangka berpikir
+          baru dan kesiapan pedagogis sebagai pendidik abad ke-21.
+        </p>
+      </div>
+
+      <!-- Overview 6 Pertemuan Carousel/Cards -->
+      <div class="meetings-grid" id="pertemuan">
+        <!-- Card 1 -->
+        <div class="meeting-card">
+          <div class="meeting-card-header">
+            <span class="meeting-pill">Pertemuan 1</span>
+            <span class="meeting-badge">Fondasi Desain</span>
+          </div>
+          <h4 class="meeting-title">Prinsip Understanding by Design (UbD)</h4>
+          <p class="meeting-summary">
+            Membedah paradigma <em>backward design</em>: menetapkan tujuan pembelajaran (CP/TP), menentukan bukti
+            asesmen yang valid, baru merancang pengalaman belajar bermakna. Mengeliminasi jebakan
+            <em>activity-oriented</em> tanpa tujuan.
+          </p>
+          <div class="meeting-keypoints">
+            <span>• 3 Tahap UbD</span>
+            <span>• Essential Question</span>
+            <span>• Alignment</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="meeting-card">
+          <div class="meeting-card-header">
+            <span class="meeting-pill">Pertemuan 2</span>
+            <span class="meeting-badge">Akomodasi Murid</span>
+          </div>
+          <h4 class="meeting-title">Teaching at the Right Level (TaRL)</h4>
+          <p class="meeting-summary">
+            Menggeser orientasi pembelajaran dari sekadar menuntaskan silabus usia menjadi mengajar sesuai tingkat
+            kemampuan faktual siswa melalui asesmen diagnostik berkala dan pengelompokan fleksibel.
+          </p>
+          <div class="meeting-keypoints">
+            <span>• Asesmen Awal</span>
+            <span>• Pengelompokan Fleksibel</span>
+            <span>• Scaffolding</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="meeting-card">
+          <div class="meeting-card-header">
+            <span class="meeting-pill">Pertemuan 3</span>
+            <span class="meeting-badge">Kontekstualisasi Budaya</span>
+          </div>
+          <h4 class="meeting-title">Culturally Responsive Teaching (CRT)</h4>
+          <p class="meeting-summary">
+            Mengintegrasikan kekayaan budaya lokal, kearifan setempat, dan latar belakang sosial siswa ke dalam media
+            dan contoh kasus pembelajaran vokasional agar tercipta ikatan kultural yang kuat.
+          </p>
+          <div class="meeting-keypoints">
+            <span>• Relevansi Kultural</span>
+            <span>• Kesadaran Kritis</span>
+            <span>• Iklim Inklusif</span>
+          </div>
+        </div>
+
+        <!-- Card 4 (FEATURED) -->
+        <div class="meeting-card featured-meeting">
+          <div class="meeting-featured-ribbon">Sorotan Utama LK 2</div>
+          <div class="meeting-card-header">
+            <span class="meeting-pill featured">Pertemuan 4</span>
+            <span class="meeting-badge-featured">Fokus Refleksi &amp; Aksi</span>
+          </div>
+          <h4 class="meeting-title">Desain Universal untuk Pembelajaran (DUP / UDL) &amp; Asesmen Autentik di SMK</h4>
+          <p class="meeting-summary">
+            Membangun arsitektur pembelajaran inklusif sejak awal perencanaan berdasarkan 3 jaringan otak neurosains
+            (Afektif, Pengenalan, Strategis) melalui 3 pilar: <strong>Keterlibatan Ganda, Representasi Ganda, dan
+              Aksi-Ekspresi Ganda</strong> yang selaras dengan asesmen autentik dunia kerja vokasi.
+          </p>
+          <div class="meeting-keypoints">
+            <span>• 3 Jaringan Neurosains (CAST)</span>
+            <span>• Asesmen 7 Dimensi Vokasi</span>
+            <span>• Solusi Kasus Mandiri Jaya</span>
+            <span>• Modul Informatika X DKV</span>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="meeting-card">
+          <div class="meeting-card-header">
+            <span class="meeting-pill">Pertemuan 5</span>
+            <span class="meeting-badge">Evaluasi Holistik</span>
+          </div>
+          <h4 class="meeting-title">Pengembangan Asesmen Autentik Vokasi</h4>
+          <p class="meeting-summary">
+            Perancangan instrumen penilaian komprehensif mengintegrasikan <em>Assessment for, as, &amp; of
+              Learning</em>, rubrik performa berbasis standar industri, peer-assessment, dan jurnal refleksi
+            metakognitif (Taksonomi SOLO).
+          </p>
+          <div class="meeting-keypoints">
+            <span>• Rubrik Kinerja Industri</span>
+            <span>• Peer-Assessment</span>
+            <span>• Jurnal Metakognitif</span>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="meeting-card">
+          <div class="meeting-card-header">
+            <span class="meeting-pill">Pertemuan 6</span>
+            <span class="meeting-badge">Praktik Nyata</span>
+          </div>
+          <h4 class="meeting-title">Microteaching &amp; Evaluasi Reflektif</h4>
+          <p class="meeting-summary">
+            Uji coba penerapan modul ajar terpadu berbasis UbD dan DUP dalam simulasi <em>peer-teaching</em>, menerima
+            umpan balik kritis dosen pamong dan rekan sejawat, serta menyusun rencana perbaikan berkelanjutan.
+          </p>
+          <div class="meeting-keypoints">
+            <span>• Simulasi Microteaching</span>
+            <span>• Video Rekaman Refleksi</span>
+            <span>• RTL Berkelanjutan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: REFLEKSI 4C (DEEP DIVE) -->
+  <section id="refleksi4c" class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">ANALISIS MENDALAM MODEL 4C</span>
+        <h2 class="section-title">Refleksi Pengalaman Belajar (Topik 4: DUP &amp; Asesmen Autentik)</h2>
+        <p class="section-subtitle">
+          Eksplorasi empat pilar refleksi <em>Connection, Challenge, Concept, &amp; Change</em> yang menghubungkan teori
+          akademik dengan transformasi paradigma calon guru vokasi.
+        </p>
+      </div>
+
+      <!-- 4C Tab Navigation -->
+      <div class="reflection-tabs">
+        <button class="tab-btn active" data-target="tab-connection">
+          <div class="tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </div>
+          <div class="tab-titles">
+            <span class="tab-main-title">1. Connection</span>
+            <span class="tab-sub-title">Keterkaitan Materi &amp; Peran</span>
+          </div>
+        </button>
+
+        <button class="tab-btn" data-target="tab-challenge">
+          <div class="tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <div class="tab-titles">
+            <span class="tab-main-title">2. Challenge</span>
+            <span class="tab-sub-title">Tantangan Pola Pikir Lama</span>
+          </div>
+        </button>
+
+        <button class="tab-btn" data-target="tab-concept">
+          <div class="tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+          </div>
+          <div class="tab-titles">
+            <span class="tab-main-title">3. Concept</span>
+            <span class="tab-sub-title">Konsep Kunci &amp; Neurosains</span>
+          </div>
+        </button>
+
+        <button class="tab-btn" data-target="tab-change">
+          <div class="tab-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <polyline points="1 20 1 14 7 14"></polyline>
+              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+            </svg>
+          </div>
+          <div class="tab-titles">
+            <span class="tab-main-title">4. Change</span>
+            <span class="tab-sub-title">Perubahan Nyata Masa Depan</span>
+          </div>
+        </button>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div class="tab-content-container">
+        <!-- 1. CONNECTION PANEL -->
+        <div id="tab-connection" class="tab-panel active">
+          <div class="panel-header-badge connection-badge">
+            <span class="badge-icon">🔗</span>
+            <span>DIMENSI 1: CONNECTION (KETERKAITAN)</span>
+          </div>
+          <h3 class="panel-headline">Menjembatani Dunia Industri Kreatif, Hakikat Pembelajar Unik, dan Peran Guru Abad
+            ke-21</h3>
+
+          <div class="panel-body-grid">
+            <div class="panel-main-text">
+              <p class="paragraph-lead">
+                Selama menjalani pendidikan sarjana dan pengalaman masa lalu di bangku sekolah, saya sering menyaksikan
+                bagaimana pengajaran teknologi dan informatika terjebak pada metode transmisi satu arah: guru
+                mendiktekan teori, menghafal perintah teknis, dan menguji siswa dengan lembar pilihan ganda. Metode ini
+                sangat terputus dari realitas industri teknologi dan desain grafis yang menuntut kolaborasi,
+                problem-solving, serta portofolio karya nyata.
+              </p>
+              <p>
+                Ketika mempelajari materi <strong>Desain Universal untuk Pembelajaran (DUP/UDL)</strong> dan
+                <strong>Pembelajaran Mendalam</strong> di Topik 4, saya menemukan keterhubungan yang sangat fundamental
+                antara teori neurosains dengan peran saya sebagai guru SMK bidang Kejuruan Informatika dan Desain
+                Komunikasi Visual (DKV). DUP menyadarkan saya bahwa keberagaman siswa—mulai dari yang sudah mahir
+                mengoperasikan software desain karena pengalaman otodidak, hingga yang masih lambat mencerna logika
+                komputasi—bukanlah beban atau anomali kelas, melainkan karakteristik alami yang harus dirayakan dan
+                difasilitasi sejak awal perancangan kurikulum.
+              </p>
+              <p>
+                Keterkaitan ini semakin nyata saat merancang materi <em>Keamanan Data</em> untuk siswa DKV. Materi
+                keamanan data bukan sekadar teori abstrak kriptografi, melainkan instrumen proteksi langsung terhadap
+                reputasi, portofolio digital di Behance/Dribbble, serta karya komersial siswa dari ancaman siber dan
+                phishing klien fiktif. Dengan demikian, DUP menghubungkan secara langsung capaian kompetensi akademik
+                dengan <em>employability skills</em> dan daya saing siswa di dunia kerja nyata.
+              </p>
+            </div>
+
+            <div class="panel-sidebar-highlight">
+              <div class="highlight-box accent-blue">
+                <h4>Korelasi dengan Profil Calon Guru</h4>
+                <ul class="clean-list">
+                  <li><strong>Kompetensi Pedagogik:</strong> Menggeser fokus dari <em>how I teach</em> menjadi <em>how
+                      students uniquely learn</em> melalui rancangan multi-modal.</li>
+                  <li><strong>Kompetensi Kepribadian:</strong> Menumbuhkan empati pedagogis, kesabaran, dan komitmen
+                    keadilan belajar tanpa diskriminasi.</li>
+                  <li><strong>Kompetensi Sosial:</strong> Memfasilitasi ekosistem kolaboratif <em>peeragogi</em>, di
+                    mana siswa belajar saling menghargai dan melengkapi keahlian rekan sebayanya.</li>
+                  <li><strong>Kompetensi Profesional:</strong> Menyelaraskan kurikulum sekolah dengan dinamika standar
+                    operasional prosedur (SOP) industri kreatif global.</li>
+                </ul>
+              </div>
+
+              <div class="quote-card">
+                <blockquote>
+                  "Belajar itu seperti sepatu: tidak ada satu ukuran yang pas untuk semua kaki. Tugas guru bukan
+                  mengecilkan kaki murid, melainkan menyesuaikan ukuran dan kelenturan sepatu belajarnya."
+                </blockquote>
+                <cite>— Refleksi Sabda Patogi Aditya, S.Kom.</cite>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. CHALLENGE PANEL -->
+        <div id="tab-challenge" class="tab-panel">
+          <div class="panel-header-badge challenge-badge">
+            <span class="badge-icon">⚡</span>
+            <span>DIMENSI 2: CHALLENGE (TANTANGAN)</span>
+          </div>
+          <h3 class="panel-headline">Mendobrak Mitos "One-Size-Fits-All" dan Paradigma Ujian Berbasis Hafalan di Sekolah
+            Vokasi</h3>
+
+          <div class="challenge-cards-grid">
+            <div class="challenge-item-card">
+              <div class="challenge-number">01</div>
+              <div class="challenge-info">
+                <h4>Tantangan Asumsi: "Siswa Pasif Berarti Siswa Malas"</h4>
+                <p>
+                  Melalui bedah Kasus 4.1 di SMK Mandiri Jaya, saya tertantang untuk mengkritisi asumsi guru yang sering
+                  menyalahkan murid ketika mereka tidak berminat atau mudah menyerah. Realitasnya, siswa menjadi pasif
+                  karena guru menggunakan metode ceramah seragam yang tidak menyentuh gaya belajar mereka. Murid
+                  kinestetik dan praktikal dipaksa duduk diam mendengarkan teori rangkaian tanpa kesempatan menyentuh
+                  trainer kit.
+                </p>
+              </div>
+            </div>
+
+            <div class="challenge-item-card">
+              <div class="challenge-number">02</div>
+              <div class="challenge-info">
+                <h4>Tantangan Ketidakselarasan (Misalignment) Level Kognitif</h4>
+                <p>
+                  Fakta mengejutkan dari analisis kasus: tujuan pembelajaran menuntut level kognitif tinggi yaitu
+                  <em>menganalisis (C4)</em> dan <em>merancang prototype (C6)</em>, namun aktivitas belajar di kelas
+                  hanya berada di level <em>memahami ceramah (C2)</em>, dan asesmennya sekadar <em>tes pilihan ganda
+                    hafalan</em>. Ini adalah bentuk ketidakadilan pedagogis yang melatih murid menghafal rumus, namun
+                  gagal mencetak teknisi yang sanggup memecahkan masalah kelistrikan di bengkel.
+                </p>
+              </div>
+            </div>
+
+            <div class="challenge-item-card">
+              <div class="challenge-number">03</div>
+              <div class="challenge-info">
+                <h4>Tantangan Paradigma: "Mengajar dengan Cara Kita Belajar Dulu"</h4>
+                <p>
+                  Pertanyaan reflektif dari bahan kajian: <em>"Apakah saya mengajar dengan cara saya sendiri belajar
+                    dulu?"</em>. Generasi digital saat ini belajar melalui visual dinamis, interaktivitas, dan
+                  pengalaman langsung. Jika guru bersikeras mempertahankan pola linier papan tulis ke catatan ke ujian,
+                  maka guru sedang menciptakan disonansi belajar yang menghambat masa depan peserta didik.
+                </p>
+              </div>
+            </div>
+
+            <div class="challenge-item-card">
+              <div class="challenge-number">04</div>
+              <div class="challenge-info">
+                <h4>Tantangan Kekeliruan Menurunkan Standar (Lowering Standards)</h4>
+                <p>
+                  Banyak guru khawatir bahwa memberikan kebebasan cara berekspresi (poster, podcast, demonstrasi, video)
+                  akan menurunkan kualitas evaluasi. Pembelajaran DUP membuktikan sebaliknya: DUP <strong>tidak pernah
+                    menurunkan standar capaian</strong>, melainkan menghilangkan hambatan akses yang tidak relevan agar
+                  setiap anak mampu mendemonstrasikan standar kompetensi yang sama tingginya.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. CONCEPT PANEL -->
+        <div id="tab-concept" class="tab-panel">
+          <div class="panel-header-badge concept-badge">
+            <span class="badge-icon">💡</span>
+            <span>DIMENSI 3: CONCEPT (KONSEP KUNCI)</span>
+          </div>
+          <h3 class="panel-headline">Konsep Esensial Neurosains, 3 Pilar DUP, dan Kerangka Asesmen Holistik Vokasional
+          </h3>
+
+          <!-- Neuroscience 3 Brain Networks -->
+          <div class="concept-deep-block">
+            <h4 class="concept-block-title">A. Landasan Neurosains dalam DUP (CAST Research Foundation)</h4>
+            <div class="neuro-networks-grid">
+              <div class="neuro-card affective">
+                <div class="neuro-tag">Jaringan Afektif</div>
+                <div class="neuro-question">The "WHY" of Learning</div>
+                <p class="neuro-desc">Terletak di bagian medial otak. Mengatur emosi, motivasi, ketertarikan, dan
+                  komitmen belajar.</p>
+                <div class="neuro-pilar">
+                  <strong>Pilar DUP 1: Beragam Cara Keterlibatan (Engagement)</strong>
+                  <ul>
+                    <li>Menghargai minat, otonomi, dan pilihan murid</li>
+                    <li>Mengaitkan tugas dengan konteks nyata (cuan &amp; karier DKV)</li>
+                    <li>Memupuk resiliensi dan kolaborasi kelompok</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="neuro-card recognition">
+                <div class="neuro-tag">Jaringan Pengenalan</div>
+                <div class="neuro-question">The "WHAT" of Learning</div>
+                <p class="neuro-desc">Terletak di bagian posterior/belakang otak. Mengidentifikasi informasi, simbol,
+                  teks, dan pola visual.</p>
+                <div class="neuro-pilar">
+                  <strong>Pilar DUP 2: Beragam Cara Representasi (Representation)</strong>
+                  <ul>
+                    <li>Menyajikan konten melalui teks, audio, infografis, &amp; video</li>
+                    <li>Menjelaskan simbol teknis dan terminologi (glosarium)</li>
+                    <li>Mengaktifkan skema pengetahuan awal melalui studi kasus</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="neuro-card strategic">
+                <div class="neuro-tag">Jaringan Strategis</div>
+                <div class="neuro-question">The "HOW" of Learning</div>
+                <p class="neuro-desc">Terletak di bagian korteks prefrontal. Mengatur perencanaan, eksekusi tindakan,
+                  dan fungsi eksekutif.</p>
+                <div class="neuro-pilar">
+                  <strong>Pilar DUP 3: Beragam Aksi &amp; Ekspresi (Action &amp; Expression)</strong>
+                  <ul>
+                    <li>Fleksibilitas opsi unjuk kerja (poster, presentasi, video)</li>
+                    <li>Dukungan alat bantu bertahap (rubrik, scaffolding, template)</li>
+                    <li>Pengembangan fungsi eksekutif &amp; pemantauan kemajuan diri</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Conceptual Comparison DUP vs DI -->
+          <div class="concept-split-grid">
+            <div class="concept-sub-card">
+              <h4>B. DUP vs. Pembelajaran Berdiferensiasi (DI)</h4>
+              <p>
+                Meskipun sama-sama berpusat pada pemenuhan kebutuhan belajar murid, terdapat perbedaan titik berangkat:
+              </p>
+              <div class="table-responsive">
+                <table class="compact-table">
+                  <thead>
+                    <tr>
+                      <th>Dimensi</th>
+                      <th>Desain Universal (DUP/UDL)</th>
+                      <th>Diferensiasi (DI)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Fokus Utama</strong></td>
+                      <td>Desain arsitektur awal kurikulum bebas hambatan sejak awal (proaktif)</td>
+                      <td>Penyesuaian dan modifikasi selama proses belajar berlangsung (responsif)</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Analogi</strong></td>
+                      <td>Membangun gedung yang langsung memiliki ramp dan lift untuk semua orang</td>
+                      <td>Menyediakan kursi roda tambahan atau asisten saat ada orang berkebutuhan khusus tiba</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Sinergi</strong></td>
+                      <td colspan="2" class="text-center font-medium highlight-cell">Keduanya berpadu selaras: DUP
+                        menyiapkan ekosistem fleksibel, DI merespons dinamika harian siswa di kelas.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="concept-sub-card">
+              <h4>C. 7 Dimensi Asesmen Holistik Vokasional (TVET)</h4>
+              <ul class="dimensi-list">
+                <li><span class="num">1</span> <strong>Knowledge:</strong> Penguasaan fakta, konsep logis keamanan siber
+                  &amp; privasi.</li>
+                <li><span class="num">2</span> <strong>Skills:</strong> Keterampilan terapan mengonfigurasi 2FA,
+                  password kuat, enkripsi.</li>
+                <li><span class="num">3</span> <strong>Attitude:</strong> Sikap tanggung jawab profesional menjaga
+                  kerahasiaan data klien.</li>
+                <li><span class="num">4</span> <strong>Performance (6-M):</strong> Mengamati, menanya, mencoba, menalar,
+                  menyaji, mencipta.</li>
+                <li><span class="num">5</span> <strong>Value Internalization:</strong> Penghayatan nilai integritas
+                  moral desainer (Krathwohl).</li>
+                <li><span class="num">6</span> <strong>Metacognitive Reflection:</strong> Refleksi mandiri kendala &amp;
+                  strategi (Taksonomi SOLO).</li>
+                <li><span class="num">7</span> <strong>Deep Learning Integration:</strong> Memadukan cipta, rasa, dan
+                  karsa dalam produk nyata.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. CHANGE PANEL -->
+        <div id="tab-change" class="tab-panel">
+          <div class="panel-header-badge change-badge">
+            <span class="badge-icon">🚀</span>
+            <span>DIMENSI 4: CHANGE (PERUBAHAN)</span>
+          </div>
+          <h3 class="panel-headline">Transformasi Konkret: Dari Rencana Teoritis Menjadi Ekosistem Pembelajaran Bermakna
+          </h3>
+
+          <div class="change-timeline">
+            <div class="timeline-step">
+              <div class="step-marker">1</div>
+              <div class="step-card">
+                <h4>Perubahan Pola Pikir (Mindset Shift)</h4>
+                <p>
+                  Saya tidak lagi memandang kelas sebagai satu kelompok monolitik yang harus diperlakukan sama. Saya
+                  menyadari bahwa murid yang tidak merespons penjelasan ceramah bukan berarti tidak mampu, melainkan
+                  butuh representasi visual atau simulasi taktil. Keberagaman adalah kekuatan, bukan rintangan.
+                </p>
+                <span class="step-tag">Mindset Guru Inklusif</span>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="step-marker">2</div>
+              <div class="step-card">
+                <h4>Inovasi Perancangan Modul Ajar (Desain Kurikulum DUP)</h4>
+                <p>
+                  Menerapkan format Modul Ajar DUP seperti yang telah saya buktikan pada topik Keamanan Data X DKV:
+                  menyediakan materi via tutorial video pendek, sketsa infografis, dan live demo tools
+                  (passwordmonster.com); menyediakan pilihan unjuk karya (Poster Protokol Keamanan, Video Simulasi, atau
+                  Presentasi Portofolio Behance terlindungi 2FA).
+                </p>
+                <span class="step-tag">Implementasi RPP &amp; LK 4.D</span>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="step-marker">3</div>
+              <div class="step-card">
+                <h4>Transformasi Pedagogi Kelas: Model "Start-up Studio" &amp; Peeragogi</h4>
+                <p>
+                  Menghilangkan kelas pasif dengan menyulap kelas menjadi studio start-up teknologi/desain kolaboratif.
+                  Setiap murid heterogen diberikan peran spesifik sesuai kekuatannya: siswa terampil teknis menjadi
+                  <em>Lead Technician</em>, siswa analitis menjadi <em>Quality Control</em>, dan siswa berjiwa
+                  komunikatif/bisnis menjadi <em>Project Manager</em>. Semua berkontribusi nyata tanpa ada yang
+                  ditinggalkan.
+                </p>
+                <span class="step-tag">Praktik Pedagogi Kolaboratif</span>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <div class="step-marker">4</div>
+              <div class="step-card">
+                <h4>Restrukturisasi Asesmen Menjadi Autentik dan Berkesadaran</h4>
+                <p>
+                  Menggantikan ujian tertulis hafalan semata dengan <em>Asesmen Autentik Berkelanjutan</em>: asesmen
+                  formatif lembar ceklis analisis brief phishing klien palsu, asesmen sumatif proyek mini <em>"Digital
+                    Secure Branding"</em>, asesmen teman sejawat (peer-assessment), serta jurnal refleksi mandiri
+                  <em>"Komitmen Desainer Aman"</em>.
+                </p>
+                <span class="step-tag">Authentic Assessment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: ANALISIS ARTEFAK PEMBELAJARAN (6 ARTEFAK OTENTIK) -->
+  <section id="artefak" class="section bg-subtle">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">BUKTI DUKUNG HASIL REFLEKSI</span>
+        <h2 class="section-title">Analisis 6 Artefak Pembelajaran Otentik</h2>
+        <p class="section-subtitle">
+          Dokumentasi dan identifikasi artefak pembelajaran dari folder aset sebagai bukti dukung empiris hasil refleksi
+          mendalam, lengkap dengan analisis pedagogis dan relevansi kompetensi guru profesional.
+        </p>
+      </div>
+
+      <!-- Artifacts Filter / Control Bar -->
+      <div class="artifact-filter-bar">
+        <span class="filter-label">Filter Dokumen:</span>
+        <button class="filter-btn active" data-filter="all">Semua Artefak (6)</button>
+        <button class="filter-btn" data-filter="kasus">Studi Kasus</button>
+        <button class="filter-btn" data-filter="desain">Desain Modul &amp; Refleksi</button>
+        <button class="filter-btn" data-filter="kajian">Kajian Teoretis &amp; Sintesis</button>
+      </div>
+
+      <!-- Artifacts Grid -->
+      <div class="artifacts-grid">
+        <!-- ARTIFACT 1 -->
+        <div class="artifact-card" data-category="kasus">
+          <div class="artifact-top">
+            <div class="artifact-file-badge pdf-badge">PDF</div>
+            <span class="artifact-num">Artefak 01</span>
+          </div>
+          <h4 class="artifact-title">Aktivitas 4.1: Analisis Kasus Tantangan Kelas Vokasi Mandiri Jaya</h4>
+          <p class="artifact-file-name">Asset/Aktivitas 4.1. Kasus 4.1.pdf</p>
+
+          <div class="artifact-desc">
+            <p><strong>Deskripsi Dokumen:</strong> Analisis komprehensif atas permasalahan heterogenitas 32 murid kelas
+              XI Teknik Elektronika SMK Mandiri Jaya dengan kesenjangan tajam antara tujuan tingkat tinggi (C4/C6)
+              dengan metode ceramah pasif guru dan tes hafalan.</p>
+            <p><strong>Alasan Pemilihan Bukti Dukung:</strong> Artefak ini merupakan bukti awal kemampuan diagnostik
+              kritis saya dalam membedah fenomena <em>misalignment</em> pedagogis di sekolah kejuruan, serta merumuskan
+              pertanyaan pemantik krusial mengenai pembelajaran bermakna dan berkesadaran.</p>
+          </div>
+
+          <div class="artifact-meta-tags">
+            <span>Studi Kasus 4.1</span>
+            <span>Problem Identification</span>
+            <span>Kasus Elektronika</span>
+          </div>
+
+          <div class="artifact-actions">
+            <button class="btn btn-sm btn-primary btn-preview-pdf" data-file="Asset/Aktivitas 4.1. Kasus 4.1.pdf"
+              data-title="Aktivitas 4.1. Kasus 4.1">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>Pratinjau PDF</span>
+            </button>
+            <a href="Asset/Aktivitas 4.1. Kasus 4.1.pdf" download class="btn btn-sm btn-ghost" title="Unduh File">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ARTIFACT 2 -->
+        <div class="artifact-card" data-category="kasus">
+          <div class="artifact-top">
+            <div class="artifact-file-badge pdf-badge">PDF</div>
+            <span class="artifact-num">Artefak 02</span>
+          </div>
+          <h4 class="artifact-title">LK 4C: Solusi Kolaboratif Rekayasa Pembelajaran Berbasis DUP</h4>
+          <p class="artifact-file-name">Asset/LK 4C. Diskusi Pemecahan Kasus_Kelompok 2.pdf</p>
+
+          <div class="artifact-desc">
+            <p><strong>Deskripsi Dokumen:</strong> Hasil kerja kolaborasi kelompok (Sabda Patogi Aditya dkk) yang
+              merancang ulang skenario pembelajaran menggunakan kerangka DUP, model Project-Based Learning (PjBL),
+              simulasi Proteus, diferensiasi siswa terampil vs butuh bimbingan, dan asesmen autentik.</p>
+            <p><strong>Alasan Pemilihan Bukti Dukung:</strong> Menjadi bukti autentik kompetensi sosial dan kolaboratif
+              dalam merumuskan pemecahan masalah pedagogis bersama rekan sejawat, menghadirkan desain pembelajaran yang
+              joyful, mindful, dan meaningful.</p>
+          </div>
+
+          <div class="artifact-meta-tags">
+            <span>Kolaborasi Kelompok</span>
+            <span>Desain PjBL</span>
+            <span>Diferensiasi Vokasi</span>
+          </div>
+
+          <div class="artifact-actions">
+            <button class="btn btn-sm btn-primary btn-preview-pdf"
+              data-file="Asset/LK 4C. Diskusi Pemecahan Kasus_Kelompok 2.pdf"
+              data-title="LK 4C. Diskusi Pemecahan Kasus Kelompok">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>Pratinjau PDF</span>
+            </button>
+            <a href="Asset/LK 4C. Diskusi Pemecahan Kasus_Kelompok 2.pdf" download class="btn btn-sm btn-ghost"
+              title="Unduh File">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ARTIFACT 3 (FEATURED MASTERPIECE) -->
+        <div class="artifact-card featured-artifact" data-category="desain">
+          <div class="artifact-top">
+            <div class="artifact-file-badge masterpiece-badge">Karya Unggulan</div>
+            <span class="artifact-num">Artefak 03</span>
+          </div>
+          <h4 class="artifact-title">LK 4.D: Desain Modul Ajar DUP Informatika (X DKV - Keamanan Data)</h4>
+          <p class="artifact-file-name">Asset/LK4.D_PMA_SabdaPatogiAditya.pdf</p>
+
+          <div class="artifact-desc">
+            <p><strong>Deskripsi Dokumen:</strong> Desain rencana pembelajaran mandiri 2 JP mata pelajaran Informatika
+              kelas X DKV 1 topik "Keamanan Data". Memuat pemetaan 8 Dimensi Profil Lulusan, CP &amp; TP terukur,
+              integrasi 4 pilar fleksibilitas DUP (akses, representasi, keterlibatan, aksi), pemanfaatan website
+              <em>passwordmonster.com</em>, simulasi phishing <em>Brief Klien Palsu</em>, dan proyek <em>Digital Secure
+                Branding</em>.
+            </p>
+            <p><strong>Alasan Pemilihan Bukti Dukung:</strong> Ini adalah bukti karya puncak (masterpiece) kemampuan
+              profesional saya mengimplementasikan kerangka DUP secara presisi, kontekstual, dan selaras (alignment
+              check teruji) untuk menjawab kebutuhan riil siswa DKV SMK.</p>
+          </div>
+
+          <div class="artifact-meta-tags">
+            <span>Modul Ajar Informatika</span>
+            <span>Kelas X DKV</span>
+            <span>Password &amp; Phishing</span>
+            <span>Asesmen Autentik</span>
+          </div>
+
+          <div class="artifact-actions">
+            <button class="btn btn-sm btn-primary btn-preview-pdf" data-file="Asset/LK4.D_PMA_SabdaPatogiAditya.pdf"
+              data-title="LK 4.D Desain Pembelajaran DUP - Sabda Patogi Aditya">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>Pratinjau PDF</span>
+            </button>
+            <a href="Asset/LK4.D_PMA_SabdaPatogiAditya.pdf" download class="btn btn-sm btn-ghost" title="Unduh File">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ARTIFACT 4 -->
+        <div class="artifact-card" data-category="desain">
+          <div class="artifact-top">
+            <div class="artifact-file-badge pdf-badge">PDF</div>
+            <span class="artifact-num">Artefak 04</span>
+          </div>
+          <h4 class="artifact-title">LK 4.E: Esai Sintesis Reflektif "Menghadirkan Inklusivitas &amp; Kesiapan Kerja"
+          </h4>
+          <p class="artifact-file-name">Asset/LK4.E_PMA_SabdaPatogiAditya.pdf</p>
+
+          <div class="artifact-desc">
+            <p><strong>Deskripsi Dokumen:</strong> Tulisan refleksi mendalam mengenai filosofi DUP sebagai fondasi
+              keadilan belajar, telaah tiga prinsip operasional di lapangan, strategi penyelarasan asesmen inklusif
+              dengan tuntutan dunia kerja SMK, serta langkah konkret menghadapi keterbatasan waktu dan sarana.</p>
+            <p><strong>Alasan Pemilihan Bukti Dukung:</strong> Menjadi bukti metakognisi dan internalisasi nilai
+              keadilan belajar calon guru profesional, membuktikan bahwa saya tidak hanya menguasai teknik teknis, namun
+              menghayati esensi humanistik pendidikan vokasi.</p>
+          </div>
+
+          <div class="artifact-meta-tags">
+            <span>Esai Refleksi Individu</span>
+            <span>Keadilan Belajar</span>
+            <span>Kesiapan Kerja SMK</span>
+          </div>
+
+          <div class="artifact-actions">
+            <button class="btn btn-sm btn-primary btn-preview-pdf" data-file="Asset/LK4.E_PMA_SabdaPatogiAditya.pdf"
+              data-title="LK 4.E Esai Refleksi DUP - Sabda Patogi Aditya">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>Pratinjau PDF</span>
+            </button>
+            <a href="Asset/LK4.E_PMA_SabdaPatogiAditya.pdf" download class="btn btn-sm btn-ghost" title="Unduh File">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ARTIFACT 5 -->
+        <div class="artifact-card" data-category="kajian">
+          <div class="artifact-top">
+            <div class="artifact-file-badge pdf-badge">PDF (42 Halaman)</div>
+            <span class="artifact-num">Artefak 05</span>
+          </div>
+          <h4 class="artifact-title">Modul T4-B &amp; Dokumen Pengantar: Landasan Teoretis DUP &amp; TVET</h4>
+          <p class="artifact-file-name">Asset/T4-B.pdf &amp; Asset/Pengantar Topik 4.docx</p>
+
+          <div class="artifact-desc">
+            <p><strong>Deskripsi Dokumen:</strong> Buku teks panduan utama persiapan pemecahan kasus yang merinci riset
+              neurosains DUP, pedoman CAST 2024 (9 guidelines), tabel hambatan &amp; rekomendasi, serta 7 dimensi
+              asesmen vokasional TVET yang mencakup Knowledge, Skills, Attitude hingga Metacognitive Reflection.</p>
+            <p><strong>Alasan Pemilihan Bukti Dukung:</strong> Menjadi rujukan akademik dan teoretis primer
+              (epistemological evidence) yang mendasari dan memvalidasi setiap pertimbangan ilmiah dalam LK 2 ini.</p>
+          </div>
+
+          <div class="artifact-meta-tags">
+            <span>Kajian Teori DUP</span>
+            <span>Panduan CAST 2024</span>
+            <span>7 Dimensi Vokasional</span>
+          </div>
+
+          <div class="artifact-actions">
+            <button class="btn btn-sm btn-primary btn-preview-pdf" data-file="Asset/T4-B.pdf"
+              data-title="T4-B: Panduan Teori DUP & Asesmen Holistik">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>Pratinjau PDF</span>
+            </button>
+            <a href="Asset/T4-B.pdf" download class="btn btn-sm btn-ghost" title="Unduh File PDF">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+            <a href="Asset/Pengantar Topik 4.docx" download class="btn btn-sm btn-ghost"
+              title="Unduh Dokumen Word (Pengantar Topik 4.docx)">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span>DOCX</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- ARTIFACT 6 -->
+        <div class="artifact-card" data-category="kajian">
+          <div class="artifact-top">
+            <div class="artifact-file-badge pdf-badge">PDF</div>
+            <span class="artifact-num">Artefak 06</span>
+          </div>
+          <h4 class="artifact-title">Sintesis T4-D &amp; Rencana Tindak Lanjut Microteaching T4-E</h4>
+          <p class="artifact-file-name">Asset/T4-D.pdf &amp; Asset/T4-E.pdf</p>
+
+          <div class="artifact-desc">
+            <p><strong>Deskripsi Dokumen:</strong> Sintesis integrasi keterpaduan DUP dengan kerangka UbD dan asesmen
+              autentik, serta panduan refleksi diri dan rencana tindak lanjut (RTL) penyusunan template RPP untuk diuji
+              coba dalam microteaching dan simulasi kelas riil.</p>
+            <p><strong>Alasan Pemilihan Bukti Dukung:</strong> Menjadi jembatan operasional dari ranah konsepsi kognitif
+              menuju ranah aksi performa berkelanjutan (action research), memastikan refleksi bermuara pada peningkatan
+              kompetensi mengajar nyata.</p>
+          </div>
+
+          <div class="artifact-meta-tags">
+            <span>Sintesis DUP-UbD</span>
+            <span>RTL Microteaching</span>
+            <span>Continuous Improvement</span>
+          </div>
+
+          <div class="artifact-actions">
+            <button class="btn btn-sm btn-primary btn-preview-pdf" data-file="Asset/T4-D.pdf"
+              data-title="T4-D Sintesis Integrasi DUP & Asesmen">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+              <span>Pratinjau PDF</span>
+            </button>
+            <a href="Asset/T4-E.pdf" download class="btn btn-sm btn-ghost" title="Unduh File T4-E">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: KAITAN PRAKTIS & SKENARIO KELAS INFORMATIKA DKV -->
+  <section id="praktik" class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">IMPLEMENTASI KELAS NYATA</span>
+        <h2 class="section-title">Kaitan Praktis: Skenario Pembelajaran Berbasis DUP</h2>
+        <p class="section-subtitle">
+          Penjelasan aplikasi praktis konsep DUP pada Mata Pelajaran Informatika Kelas X SMK Desain Komunikasi Visual
+          (DKV), membuktikan keselarasan antara tujuan, pengalaman belajar, dan asesmen autentik.
+        </p>
+      </div>
+
+      <!-- Alignment Table Matrix -->
+      <div class="alignment-box glass-panel">
+        <div class="alignment-header">
+          <div class="alignment-title-wrap">
+            <span class="badge-success">Terkonfirmasi Selaras (Aligned)</span>
+            <h3>Matriks Keselarasan: Capaian, Pengalaman DUP, dan Asesmen Autentik</h3>
+          </div>
+          <span class="meta-tag-course">Informatika • X DKV 1 • Topik: Keamanan Data</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="alignment-table">
+            <thead>
+              <tr>
+                <th style="width: 20%;">Komponen Pembelajaran</th>
+                <th style="width: 40%;">Rancangan Kontekstual di Kelas</th>
+                <th style="width: 40%;">Penerapan Prinsip DUP / Asesmen Autentik</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. Capaian &amp; Tujuan (CP &amp; TP)</strong></td>
+                <td>
+                  <p class="text-sm"><strong>CP:</strong> Memahami keamanan data untuk melindungi portofolio dan aset
+                    digital dalam ekosistem industri kreatif.</p>
+                  <p class="text-sm"><strong>TP 1:</strong> Membuat password kuat akun desain (Adobe CC, Behance).</p>
+                  <p class="text-sm"><strong>TP 2:</strong> Mengonfigurasi autentikasi 2FA.</p>
+                  <p class="text-sm"><strong>TP 3:</strong> Mengidentifikasi phishing email klien palsu.</p>
+                </td>
+                <td>
+                  <span class="pill-dup blue">Fleksibilitas Keterlibatan (Engagement)</span>
+                  <p class="text-xs mt-1">Mengaitkan tujuan langsung dengan perlindungan karya cipta dan kelangsungan
+                    karier finansial (cuan) murid sebagai calon desainer grafis.</p>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>2. Pendahuluan &amp; Pemantik</strong></td>
+                <td>
+                  <p class="text-sm">Penyajian studi kasus nyata: <em>"Seorang desainer grafis freelance kehilangan
+                      seluruh file master klien senilai belasan juta rupiah akibat akun dibobol hacker karena tidak
+                      mengaktifkan 2FA."</em></p>
+                </td>
+                <td>
+                  <span class="pill-dup green">Fleksibilitas Akses &amp; Persepsi</span>
+                  <p class="text-xs mt-1">Kasus disajikan multi-format: video storytelling singkat, tangkapan layar
+                    berita viral, dan narasi lisan interaktif.</p>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>3. Aktivitas Inti (Workshop &amp; Simulasi)</strong></td>
+                <td>
+                  <ul class="text-sm clean-list-sm">
+                    <li>• <strong>Workshop Password:</strong> Praktik meracik kombinasi istilah seni visual (cth:
+                      <code>Cmyk#2026!Color</code>) dan menguji ketahanannya di <em>passwordmonster.com</em>.
+                    </li>
+                    <li>• <strong>Simulasi 2FA:</strong> Praktik aktivasi verifikasi dua langkah pada akun Google/Cloud
+                      Storage studio.</li>
+                    <li>• <strong>Analisis Brief Phishing:</strong> Diskusi kelompok membedah header email, domain
+                      fiktif, dan link berbahaya dari "Klien Palsu".</li>
+                  </ul>
+                </td>
+                <td>
+                  <span class="pill-dup purple">Fleksibilitas Representasi</span>
+                  <p class="text-xs mt-1">Panduan visual berbentuk infografis khas DKV, video demonstrasi langkah demi
+                    langkah, dan lembar ceklis indikator phishing.</p>
+                </td>
+              </tr>
+              <tr>
+                <td><strong>4. Asesmen Autentik &amp; Unjuk Kerja</strong></td>
+                <td>
+                  <ul class="text-sm clean-list-sm">
+                    <li>• <strong>Formatif:</strong> Lembar ceklis deteksi email penipuan (penalaran kritis).</li>
+                    <li>• <strong>Sumatif Proyek Mini:</strong> <em>"Digital Secure Branding"</em> — pembuktian
+                      portofolio Behance/Dribbble terlindungi password kuat &amp; 2FA.</li>
+                    <li>• <strong>Refleksi Mandiri:</strong> Jurnal <em>"Komitmen Desainer Aman"</em>.</li>
+                  </ul>
+                </td>
+                <td>
+                  <span class="pill-dup amber">Fleksibilitas Aksi &amp; Ekspresi</span>
+                  <p class="text-xs mt-1">Murid bebas menunjukkan bukti hasil: poster infografis protokol keamanan
+                    studio, screencast video tutorial, atau demonstrasi live presentasi.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Classroom Strategy: Start-up Studio & Peeragogy -->
+      <div class="strategy-row-grid mt-6">
+        <div class="strategy-card">
+          <div class="strategy-icon">🏢</div>
+          <h4>Simulasi "Start-up Studio Kreatif"</h4>
+          <p>
+            Ruang kelas laboratorium komputer ditata ulang menyerupai suasana <em>creative agency</em>. Murid tidak
+            duduk berderet menghadap papan tulis, melainkan berkelompok membentuk 5-6 agensi mini dengan papan kanban
+            kerja, memupuk iklim kerja profesional sejak kelas X.
+          </p>
+        </div>
+
+        <div class="strategy-card">
+          <div class="strategy-icon">👥</div>
+          <h4>Prinsip Peeragogi (Tutor Sebaya Heterogen)</h4>
+          <p>
+            Siswa yang sudah mahir di bidang teknis IT menjadi <strong>Lead Security Officer</strong> yang mendampingi
+            rekan satu tim; siswa yang berbakat desain memimpin <strong>Visual Layout</strong> poster keamanan; siswa
+            yang komunikatif bertindak sebagai <strong>Account Director</strong> yang mempresentasikan strategi mitigasi
+            risiko di depan kelas.
+          </p>
+        </div>
+
+        <div class="strategy-card">
+          <div class="strategy-icon">🛡️</div>
+          <h4>Internalisasi Etika &amp; Regulasi Siber</h4>
+          <p>
+            Pembelajaran menginternalisasikan pemahaman hukum UU ITE, etika menjaga hak kekayaan intelektual (HAKI),
+            serta tanggung jawab menjaga kerahasiaan berkas <em>Non-Disclosure Agreement (NDA)</em> milik klien
+            industri.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION: RENCANA TINDAK LANJUT & MASA DEPAN -->
+  <section id="tindaklanjut" class="section bg-subtle">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">AKSI NYATA BERKELANJUTAN</span>
+        <h2 class="section-title">Rencana Tindak Lanjut (RTL) &amp; Perubahan Masa Depan</h2>
+        <p class="section-subtitle">
+          Langkah strategis pasca refleksi Semester 1 untuk memastikan pertumbuhan profesionalitas berkelanjutan
+          menjelang PPL 2 dan uji kompetensi guru profesional.
+        </p>
+      </div>
+
+      <div class="rtl-grid">
+        <div class="rtl-card">
+          <div class="rtl-icon">📝</div>
+          <span class="rtl-timeframe">Jangka Pendek (1-2 Bulan)</span>
+          <h4>Penyusunan Modul Ajar Berbasis UbD &amp; DUP untuk Microteaching</h4>
+          <p>
+            Mengintegrasikan seluruh prinsip fleksibilitas keterlibatan, representasi, dan ekspresi ke dalam seluruh
+            perangkat ajar mata pelajaran Informatika dan Dasar Kejuruan DKV, dilengkapi instrumen asesmen autentik dan
+            rubrik analitis siap pakai.
+          </p>
+        </div>
+
+        <div class="rtl-card">
+          <div class="rtl-icon">🏫</div>
+          <span class="rtl-timeframe">Jangka Menengah (Praktik PPL di Sekolah Mitra)</span>
+          <h4>Uji Coba Asesmen Autentik Berbasis Klien Industri</h4>
+          <p>
+            Menjalin kemitraan dengan UMKM atau unit produksi sekolah untuk memberikan proyek desain riil kepada siswa,
+            sehingga asesmen kinerja tidak lagi simulasi fiktif, melainkan pengujian langsung terhadap kepuasan klien
+            dan standar mutu pasar.
+          </p>
+        </div>
+
+        <div class="rtl-card">
+          <div class="rtl-icon">🤝</div>
+          <span class="rtl-timeframe">Jangka Panjang (Guru Tetap / Berkelanjutan)</span>
+          <h4>Pengembangan Komunitas Praktisi &amp; Bank Sumber Belajar DUP</h4>
+          <p>
+            Menginisiasi kolaborasi antarguru melalui MGMP Informatika dan DKV untuk saling berbagi modul, video
+            tutorial ber-caption, dan aset pembelajaran diferensiatif, guna menekan beban kerja individu guru dan
+            mempercepat pemerataan pendidikan inklusif di SMK.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMAL PRINTABLE LK 2 VIEW CONTAINER (Hidden by default, shown when toggling mode or printing) -->
+  <section id="formalLk2Container" class="formal-lk2-container print-only">
+    <div class="formal-paper">
+      <!-- Formal Document Header -->
+      <div class="formal-doc-header">
+        <div class="formal-logo-row">
+          <div class="formal-logo-text">
+            <h2>KEMENTERIAN PENDIDIKAN, KEBUDAYAAN, RISET, DAN TEKNOLOGI</h2>
+            <h3>DIREKTORAT JENDERAL GURU DAN TENAGA KEPENDIDIKAN</h3>
+            <h4>PROGRAM PENDIDIKAN PROFESI GURU (PPG) CALON GURU</h4>
+          </div>
+        </div>
+        <hr class="formal-divider-double">
+        <h2 class="formal-sheet-title">LEMBAR KERJA 2 (LK 2)<br>REFLEKSI PENGALAMAN BELAJAR SETIAP MATA KULIAH</h2>
+        <p class="formal-sheet-sub">Portofolio Digital Penilaian Kinerja Reflektif Semester 1</p>
+      </div>
+
+      <!-- Formal Student Info Table -->
+      <table class="formal-info-table">
+        <tr>
+          <td style="width: 25%; font-weight: bold;">Nama Mahasiswa</td>
+          <td style="width: 2%;">:</td>
+          <td style="width: 73%; font-weight: bold;">SABDA PATOGI ADITYA, S.Kom.</td>
+        </tr>
+        <tr>
+          <td>Mata Kuliah / Bidang Studi</td>
+          <td>:</td>
+          <td>Pembelajaran Mendalam dan Asesmen (PMA) / Informatika &amp; Desain Komunikasi Visual (DKV)</td>
+        </tr>
+        <tr>
+          <td>Semester / Kelas</td>
+          <td>:</td>
+          <td>Semester 1 (Satu) / Kelas PPG Calon Guru Vokasi</td>
+        </tr>
+        <tr>
+          <td>Tautan Portofolio Digital</td>
+          <td>:</td>
+          <td><a
+              href="https://portofolio-ppg.sabda-aditya.id/lk2-refleksi">https://portofolio-ppg.sabda-aditya.id/lk2-refleksi</a>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Formal Content Section 1 -->
+      <div class="formal-section">
+        <h3 class="formal-section-title">I. REVIEW PENGALAMAN BELAJAR (6 PERTEMUAN SEMESTER 1)</h3>
+        <table class="formal-data-table">
+          <thead>
+            <tr>
+              <th style="width: 8%;">No</th>
+              <th style="width: 30%;">Topik / Pertemuan</th>
+              <th style="width: 62%;">Ringkasan Pengalaman Belajar &amp; Makna Pedagogis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center font-bold">1</td>
+              <td><strong>Prinsip Understanding by Design (UbD)</strong></td>
+              <td>Mempelajari alur perancangan mundur (<em>backward design</em>) yang dimulai dari penetapan hasil yang
+                diinginkan (CP/TP), perumusan bukti penilaian autentik, hingga penentuan strategi belajar. Mengubah pola
+                pikir dari sekadar menghabiskan materi menjadi mencapai pemahaman mendalam yang bermakna.</td>
+            </tr>
+            <tr>
+              <td class="text-center font-bold">2</td>
+              <td><strong>Pendekatan Teaching at the Right Level (TaRL)</strong></td>
+              <td>Memahami pentingnya asesmen diagnostik awal berkala untuk memetakan kesiapan dan gaya belajar murid,
+                sehingga pembelajaran dapat disesuaikan dengan fase perkembangan kognitif faktual siswa, bukan sekadar
+                usia atau tingkatan kelas.</td>
+            </tr>
+            <tr>
+              <td class="text-center font-bold">3</td>
+              <td><strong>Pendekatan Culturally Responsive Teaching (CRT)</strong></td>
+              <td>Mengintegrasikan latar belakang kebudayaan lokal, norma sosial, dan konteks industri lingkungan murid
+                ke dalam pembelajaran kejuruan agar tercipta keterikatan makna yang mendalam dan memupuk toleransi
+                keberagaman.</td>
+            </tr>
+            <tr>
+              <td class="text-center font-bold bg-highlight">4</td>
+              <td class="bg-highlight"><strong>Desain Universal untuk Pembelajaran (DUP) &amp; Asesmen Autentik
+                  SMK</strong></td>
+              <td class="bg-highlight"><strong>(Fokus Refleksi Mendalam):</strong> Mengintegrasikan riset neurosains 3
+                jaringan otak (Afektif, Pengenalan, Strategis) dengan 3 pilar utama DUP (Keterlibatan, Representasi,
+                Aksi-Ekspresi). Menganalisis ketidakselarasan pada kasus nyata SMK Mandiri Jaya serta menyusun Modul
+                Ajar Informatika Fase E X DKV Topik Keamanan Data yang selaras dengan asesmen autentik TVET.</td>
+            </tr>
+            <tr>
+              <td class="text-center font-bold">5</td>
+              <td><strong>Pengembangan Asesmen Autentik Vokasional</strong></td>
+              <td>Menyusun instrumen penilaian komprehensif berbasis standar dunia usaha/dunia industri (DUDI),
+                merancang rubrik kinerja analitis, peer-assessment, dan jurnal reflektif SOLO taxonomy.</td>
+            </tr>
+            <tr>
+              <td class="text-center font-bold">6</td>
+              <td><strong>Microteaching &amp; Evaluasi Diri Calon Guru</strong></td>
+              <td>Melakukan uji coba peer-teaching RPP berbasis UbD dan DUP, menerima umpan balik kritis konstruktif,
+                serta menyusun rencana perbaikan berkelanjutan (continuous improvement).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Formal Content Section 2: Refleksi 4C -->
+      <div class="formal-section">
+        <h3 class="formal-section-title">II. REFLEKSI PENGALAMAN BELAJAR MODEL 4C (TOPIK 4: DUP &amp; ASESMEN DI SMK)
+        </h3>
+
+        <div class="formal-c-block">
+          <h4>1. Connection (Keterkaitan)</h4>
+          <p>
+            Materi Desain Universal untuk Pembelajaran (DUP) dan Asesmen Autentik sangat terhubung erat dengan peran
+            saya sebagai calon guru SMK Bidang Keahlian Informatika dan Desain Komunikasi Visual (DKV). Di masa lalu,
+            pembelajaran komputer sering kali diajarkan secara teoritis, hafalan definisi kabel atau perintah software,
+            lalu diuji dengan tes pilihan ganda. Hal ini sangat tidak relevan dengan tuntutan dunia kerja kreatif yang
+            mengutamakan portofolio karya, kreativitas, dan kemampuan problem solving. Pemahaman mengenai DUP
+            menghubungkan secara harmonis antara regulasi kurikulum dengan realitas keberagaman murid. Khususnya dalam
+            pembelajaran materi <em>Keamanan Data</em> kelas X DKV, saya menghubungkan materi tersebut langsung dengan
+            proteksi portofolio digital di Behance/Dribbble dari kejahatan siber dan phishing klien fiktif. DUP
+            memastikan bahwa setiap anak, terlepas dari latar belakang kemampuan awalnya, memiliki akses yang setara
+            untuk menjadi profesional di industri kreatif.
+          </p>
+        </div>
+
+        <div class="formal-c-block">
+          <h4>2. Challenge (Tantangan)</h4>
+          <p>
+            Pembelajaran pada topik ini menantang sejumlah pemikiran lama yang telah mengakar. <em>Pertama</em>, mitos
+            bahwa "murid pasif adalah murid yang malas". Melalui bedah Kasus 4.1 SMK Mandiri Jaya, terbukti bahwa
+            kepasifan murid dipicu oleh metode ceramah guru yang monoton dan tidak mengakomodasi gaya belajar praktikal
+            murid SMK. <em>Kedua</em>, tantangan terhadap ketidakselarasan level kognitif, di mana tujuan menuntut
+            analisis (C4) dan perancangan (C6), namun pengajaran hanya sampai pemahaman (C2) dan asesmen berupa tes
+            hafalan. <em>Ketiga</em>, membongkar kebiasaan guru yang "mengajar dengan cara ia sendiri belajar dulu".
+            <em>Keempat</em>, meruntuhkan kekhawatiran keliru bahwa memberikan opsi ekspresi ganda akan menurunkan
+            standar kompetensi; DUP justru mempertahankan standar kompetensi tinggi sambil menyediakan tangga
+            scaffolding yang adaptif bagi seluruh murid.
+          </p>
+        </div>
+
+        <div class="formal-c-block">
+          <h4>3. Concept (Konsep Kunci)</h4>
+          <p>
+            Konsep-konsep esensial yang dipelajari mencakup:
+          </p>
+          <ul>
+            <li><strong>Neurosains dan 3 Jaringan Otak (CAST):</strong> Jaringan Afektif (mengapa belajar / motivasi),
+              Jaringan Pengenalan (apa yang dipelajari / persepsi informasi), dan Jaringan Strategis (bagaimana
+              mengekspresikan pemahaman / fungsi eksekutif).</li>
+            <li><strong>3 Prinsip Utama DUP:</strong> (1) Beragam Cara Keterlibatan (pilihan otonomi, relevansi konteks
+              industri DKV, kolaborasi), (2) Beragam Cara Representasi (teks, tutorial video, infografis, kamus istilah
+              visual), (3) Beragam Cara Aksi dan Ekspresi (poster protokol keamanan, video simulasi, demonstrasi lisan).
+            </li>
+            <li><strong>Prinsip Penyelarasan (Alignment Check) UbD:</strong> Keterpaduan sistemik antara Capaian
+              Pembelajaran, Tujuan Pembelajaran, Aktivitas Kontekstual, dan Asesmen Autentik.</li>
+            <li><strong>7 Dimensi Asesmen Vokasional TVET:</strong> Pengukuran terintegrasi meliputi Knowledge, Skills,
+              Attitude, Performance (6-M: mengamati, menanya, mencoba, menalar, menyaji, mencipta), Value
+              Internalization (etika profesi Krathwohl), Metacognitive Reflection (Taksonomi SOLO), dan Deep Learning
+              Integration.</li>
+            <li><strong>Komplementaritas DUP dan Pembelajaran Berdiferensiasi (DI):</strong> DUP sebagai desain
+              arsitektur preventif bebas hambatan sejak awal perancangan, sedangkan DI sebagai penyesuaian responsif
+              saat proses belajar berlangsung.</li>
+          </ul>
+        </div>
+
+        <div class="formal-c-block">
+          <h4>4. Change (Perubahan)</h4>
+          <p>
+            Setelah mempelajari topik ini, perubahan nyata yang saya implementasikan adalah:
+          </p>
+          <ul>
+            <li><strong>Perubahan Paradigma:</strong> Bergeser dari pengajar seragam (one size fits all) menjadi
+              fasilitator dan perancang lingkungan belajar yang inklusif dan ramah keragaman.</li>
+            <li><strong>Perubahan Perencanaan:</strong> Merancang Modul Ajar yang selalu menyediakan variasi media
+              representasi (infografis khas DKV, video ringkas, alat digital penguji password) serta memberikan
+              fleksibilitas opsi penugasan akhir.</li>
+            <li><strong>Perubahan Manajemen Kelas:</strong> Menerapkan konsep <em>Start-up Studio</em> dan pembelajaran
+              sejawat (peeragogi), membagi siswa dalam kelompok kerja heterogen dengan peran fungsional nyata (Lead
+              Technician, Drafter/QC, Project Manager).</li>
+            <li><strong>Perubahan Asesmen:</strong> Mengganti tes hafalan dengan asesmen autentik (analisis brief
+              phishing, proyek proteksi akun digital 2FA) dan melatih metakognisi siswa melalui jurnal refleksi mandiri.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Formal Content Section 3: Analisis Artefak -->
+      <div class="formal-section">
+        <h3 class="formal-section-title">III. IDENTIFIKASI DAN ANALISIS ARTEFAK PEMBELAJARAN</h3>
+        <table class="formal-data-table">
+          <thead>
+            <tr>
+              <th style="width: 5%;">No</th>
+              <th style="width: 25%;">Nama Artefak &amp; File</th>
+              <th style="width: 35%;">Deskripsi Isi Artefak</th>
+              <th style="width: 35%;">Alasan Pemilihan sebagai Bukti Dukung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center font-bold">1</td>
+              <td><strong>Aktivitas 4.1: Analisis Kasus 4.1</strong><br><small>Asset/Aktivitas 4.1. Kasus
+                  4.1.pdf</small></td>
+              <td>Analisis diagnostik terhadap kasus kelas XI Elektronika SMK Mandiri Jaya (32 murid) yang mengalami
+                ketidakselarasan antara tujuan analitis dengan metode ceramah dan tes hafalan.</td>
+              <td>Membuktikan kemampuan calon guru dalam mengidentifikasi akar persoalan pedagogis di lapangan dan
+                merumuskan respons kritis berbasis DUP.</td>
+            </tr>
+            <tr>
+              <td class="text-center font-bold">2</td>
+              <td><strong>LK 4C: Diskusi Pemecahan Kasus Kelompok</strong><br><small>Asset/LK 4C. Diskusi Pemecahan
+                  Kasus_Kelompok 2.pdf</small></td>
+              <td>Desain ulang rencana pembelajaran kolaboratif berbasis PjBL, simulasi Proteus, trainer kit,
+                diferensiasi siswa mahir vs pemula, dan rubrik asesmen autentik.</td>
+              <td>Bukti kompetensi sosial dan kolaboratif dalam merumuskan alternatif solusi instruksional konkret
+                bersama rekan mahasiswa PPG.</td>
+            </tr>
+            <tr>
+              <td class="text-center font-bold bg-highlight">3</td>
+              <td class="bg-highlight"><strong>LK 4.D: Desain Pembelajaran DUP
+                  Informatika</strong><br><small>Asset/LK4.D_PMA_SabdaPatogiAditya.pdf</small></td>
+              <td class="bg-highlight">Rancangan modul ajar mandiri 2 JP mata pelajaran Informatika kelas X DKV 1 topik
+                "Keamanan Data". Memuat 8 Dimensi Profil Lulusan, integrasi 4 pilar DUP, pemanfaatan
+                passwordmonster.com, dan simulasi phishing.</td>
+              <td class="bg-highlight"><strong>Bukti Masterpiece:</strong> Menunjukkan kemampuan teknis dan pedagogis
+                profesional calon guru dalam merancang modul terpadu yang lolos uji keselarasan (alignment check).</td>
+            </tr>
+            <tr>
+              <td class="text-center font-bold">4</td>
+              <td><strong>LK 4.E: Esai Refleksi Individu
+                  DUP</strong><br><small>Asset/LK4.E_PMA_SabdaPatogiAditya.pdf</small></td>
+              <td>Esai konseptual mengenai pemahaman DUP sebagai keadilan belajar, praktik 3 pilar, penyelarasan asesmen
+                TVET, dan mitigasi tantangan di SMK.</td>
+              <td>Bukti kedalaman refleksi metakognitif calon guru dalam menginternalisasi nilai inklusivitas dan
+                komitmen keadilan belajar.</td>
+            </tr>
+            <tr>
+              <td class="text-center font-bold">5</td>
+              <td><strong>Bahan Ajar T4-B &amp; Pengantar Topik 4</strong><br><small>Asset/T4-B.pdf &amp; Pengantar
+                  Topik 4.docx</small></td>
+              <td>Buku teks komprehensif mengenai teori DUP, neurosains otak, panduan CAST 2024, tabel
+                tantangan-strategi, dan 7 dimensi asesmen holistik TVET.</td>
+              <td>Bukti penguasaan teori fundamental dan literatur akademik yang mendasari pengambilan keputusan
+                instruksional.</td>
+            </tr>
+            <tr>
+              <td class="text-center font-bold">6</td>
+              <td><strong>Sintesis T4-D &amp; Panduan Tindak Lanjut T4-E</strong><br><small>Asset/T4-D.pdf &amp;
+                  Asset/T4-E.pdf</small></td>
+              <td>Sintesis integrasi keterpaduan DUP dengan kerangka UbD, instrumen asesmen autentik, dan rencana tindak
+                lanjut pelaksanaan microteaching.</td>
+              <td>Bukti orientasi aksi berkelanjutan calon guru dalam menguji coba konsep di kelas mikro nyata sebelum
+                diterjunkan ke sekolah.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Formal Content Section 4: Kaitan Praktis -->
+      <div class="formal-section">
+        <h3 class="formal-section-title">IV. KAITAN PRAKTIS DAN IMPLEMENTASI MASA DEPAN</h3>
+        <p>
+          Rancangan pembelajaran DUP yang dituangkan dalam LK 4.D pada mata pelajaran Informatika Fase E (Kelas X DKV)
+          membuktikan bahwa konsep teoretis dapat diterapkan secara konkret:
+        </p>
+        <ol>
+          <li><strong>Kontekstualisasi Nyata:</strong> Topik keamanan data diarahkan langsung untuk memproteksi aset
+            portofolio karya kreatif siswa di platform industri (Adobe Creative Cloud, Behance, Dribbble) dan menangkal
+            email phishing dari tawaran proyek fiktif.</li>
+          <li><strong>Ekosistem Inklusif &amp; Kolaboratif:</strong> Laboratorium komputer dikelola dengan suasana
+            studio kreatif. Prinsip peeragogi diterapkan untuk memberdayakan kekuatan masing-masing murid tanpa ada yang
+            tertinggal.</li>
+          <li><strong>Asesmen Berkelanjutan:</strong> Menggunakan asesmen formatif lembar ceklis analisis brief, asesmen
+            sumatif proyek mini <em>Digital Secure Branding</em>, serta rubrik terstruktur yang menilai keterampilan
+            teknis (hard skills) dan etika kerja/tanggung jawab profesional (soft skills).</li>
+        </ol>
+      </div>
+
+      <!-- Signatures / Formal Verification -->
+      <div class="formal-sign-row">
+        <div class="formal-sign-col">
+          <p>Mengetahui / Mengesahkan,</p>
+          <p class="sign-role">Dosen Pembimbing / Penguji</p>
+          <div class="sign-space"></div>
+          <p class="sign-name">______________________________</p>
+          <p class="sign-nip">NIP. ...................................................</p>
+        </div>
+        <div class="formal-sign-col">
+          <p>Kota Penyusun, Oktober 2026</p>
+          <p class="sign-role">Mahasiswa Penyusun (Calon Guru),</p>
+          <div class="sign-space"></div>
+          <p class="sign-name"><strong>SABDA PATOGI ADITYA, S.Kom.</strong></p>
+          <p class="sign-nip">NIM / No. Peserta PPG: (Sesuai Data LMS)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PDF Preview Modal -->
+  <div id="pdfModal" class="modal-backdrop">
+    <div class="modal-dialog glass-panel">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-pill">Pratinjau Dokumen</span>
+          <h4 id="modalDocTitle" class="modal-title">Dokumen Artefak</h4>
+        </div>
+        <div class="modal-actions">
+          <a id="modalDownloadBtn" href="#" download class="btn btn-sm btn-ghost" title="Unduh File Asli">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Unduh</span>
+          </a>
+          <button id="modalCloseBtn" class="btn btn-sm btn-icon btn-ghost" aria-label="Tutup">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe id="pdfIframe" src="" frameborder="0"></iframe>
+        <div id="modalFallback" class="modal-fallback">
+          <p>Pratinjau langsung tidak dapat dimuat di peramban ini.</p>
+          <a id="modalDirectOpenBtn" href="#" target="_blank" class="btn btn-primary">Buka File di Tab Baru</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toastNotification" class="toast-popup">
+    <svg class="icon check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span id="toastMessage">Tautan berhasil disalin ke clipboard!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-brand">Portofolio Digital LK 2 • Sabda Patogi Aditya, S.Kom.</div>
+        <p class="footer-sub">Program Pendidikan Profesi Guru (PPG) Calon Guru • Bidang Studi Informatika &amp; DKV</p>
+      </div>
+      <div class="footer-right">
+        <p class="copyright">&copy; 2026 Sabda Patogi Aditya. Lembar Kerja 2 Seminar PPG.</p>
+        <div class="footer-links">
+          <a href="#hero">Kembali ke Atas</a>
+          <span>•</span>
+          <a href="#artefak">6 Artefak</a>
+          <span>•</span>
+          <a href="#refleksi4c">Refleksi 4C</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
